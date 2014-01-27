@@ -1,0 +1,94 @@
+﻿@model MultipleModelsDemo.ViewModels.IndexViewModel
+
+<div>
+    @using (Html.BeginForm("MyEditActionOne", "Home"))
+    {
+        <div>
+            <h4>Send Model One</h4>
+            <fieldset>
+                @Html.ValidationSummary(true, "ValidationSummary")
+                <ol>
+
+                    <li>
+                        @Html.LabelFor(m => m.TestOne.PropertyOne)
+                        @Html.TextBoxFor(m => m.TestOne.PropertyOne)
+                        @Html.ValidationMessageFor(m => m.TestOne.PropertyOne)
+                    </li>
+                    <li>
+                        @Html.LabelFor(m => m.TestOne.PropertyTwo)
+                        @Html.TextBoxFor(m => m.TestOne.PropertyTwo)
+                        @Html.ValidationMessageFor(m => m.TestOne.PropertyTwo)
+                    </li>
+                </ol>
+            </fieldset>
+            
+            <input class="btn" type="submit" value="Send" />
+        </div>
+    }
+</div>
+<hr />
+
+<div>
+    @using (Html.BeginForm("MyEditActionOne", "Home"))
+    {
+        <div>
+            <h4>Send Model Two</h4>
+            
+            <fieldset>
+                @Html.ValidationSummary(true, "ValidationSummary")
+                <ol>
+
+                    <li>
+                        @Html.LabelFor(m => m.TestTwo.PropertyThree)
+                        @Html.TextBoxFor(m => m.TestTwo.PropertyThree)
+                        @Html.ValidationMessageFor(m => m.TestTwo.PropertyThree)
+                    </li>
+                    <li>
+                        @Html.LabelFor(m => m.TestTwo.PropertyFour)
+                        @Html.TextBoxFor(m => m.TestTwo.PropertyFour)
+                        @Html.ValidationMessageFor(m => m.TestTwo.PropertyFour)
+                    </li>
+                </ol>
+            </fieldset>
+
+            <input class="btn" type="submit" value="Send" />
+        </div>
+    }
+</div>
+<hr />
+<div>
+    @using (Html.BeginForm("MyEditActionOne", "Home"))
+    {
+        <div>
+            <h4>Send both Models</h4>
+            <fieldset>
+                @Html.ValidationSummary(true, "ValidationSummary")
+                <ol>
+
+                    <li>
+                        @Html.LabelFor(m => m.TestOne.PropertyOne)
+                        @Html.TextBoxFor(m => m.TestOne.PropertyOne)
+                        @Html.ValidationMessageFor(m => m.TestOne.PropertyOne)
+                    </li>
+                    <li>
+                        @Html.LabelFor(m => m.TestOne.PropertyTwo)
+                        @Html.TextBoxFor(m => m.TestOne.PropertyTwo)
+                        @Html.ValidationMessageFor(m => m.TestOne.PropertyTwo)
+                    </li>
+                    <li>
+                        @Html.LabelFor(m => m.TestTwo.PropertyThree)
+                        @Html.TextBoxFor(m => m.TestTwo.PropertyThree)
+                        @Html.ValidationMessageFor(m => m.TestTwo.PropertyThree)
+                    </li>
+                    <li>
+                        @Html.LabelFor(m => m.TestTwo.PropertyFour)
+                        @Html.TextBoxFor(m => m.TestTwo.PropertyFour)
+                        @Html.ValidationMessageFor(m => m.TestTwo.PropertyFour)
+                    </li>
+                </ol>
+            </fieldset>
+
+            <input class="btn" type="submit" value="Send" />
+        </div>
+    }
+</div>
